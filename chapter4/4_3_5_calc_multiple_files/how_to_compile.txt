@@ -1,0 +1,7 @@
+gcc main.c stack.c getline.c getop.c (note: do not include the header file in the command arguments)
+
+Don't define variables in headers. Put declarations in header and definitions in one of the .c files.
+
+If you put a definition of a global variable in a header file, then this definition will go 
+to every .c file that includes this header, and you will get multiple definition error because 
+a variable may be declared multiple times but can be defined only once.
